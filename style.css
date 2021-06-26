@@ -1,0 +1,144 @@
+/* 
+==============
+fonts
+==============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* 
+==============
+variables
+==============
+*/
+:root {
+  /* colors */
+  --clr-orange-bright: hsl(31, 77%, 52%);
+  --clr-cyan-drak: hsl(184, 100%, 22%);
+  --clr-cyan-veryDrak: hsl(179, 100%, 13%);
+  --clr-white-transparent: hsla(0, 0%, 100%, 0.75);
+  --clr-gray-veryLight: hsl(0, 0%, 95%);
+  /* fonts */
+  --font-size: 0.9375rem;
+  --ff-heading: "Big Shoulders Display", cursive;
+  --ff-para: "Lexend Deca", sans-serif;
+  --boder-radius: 0.625rem;
+}
+/* 
+===============
+global styles
+===============
+*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--clr-gray-veryLight);
+  font-size: var(--font-size);
+  color: var(--clr-white-transparent);
+  font-family: var(--ff-para);
+}
+h1 {
+  color: var(--clr-gray-veryLight);
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-family: var(--ff-heading);
+}
+p {
+  padding: 1rem 0;
+}
+button {
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  color: var(--clr-orange-bright);
+  background-color: var(--clr-gray-veryLight);
+  text-transform: capitalize;
+  border: 0;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+button:hover {
+  border: 3px solid var(--clr-gray-veryLight);
+  cursor: pointer;
+  color: var(--clr-gray-veryLight);
+  background-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: lightseagreen;
+}
+a:hover {
+  font-size: 1rem;
+}
+a:visited {
+  color: lightcoral;
+}
+/* 
+==============
+container
+==============
+*/
+.container {
+  margin: 3rem auto;
+  width: 90vw;
+  border-radius: var(--boder-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    margin: 5rem auto;
+    height: 75vh;
+    width: 65vw;
+    flex-direction: row;
+  }
+}
+/* 
+===========
+column
+===========
+*/
+.column {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sedan {
+  background-color: var(--clr-orange-bright);
+}
+.suv {
+  background-color: var(--clr-cyan-drak);
+}
+.luxury {
+  background-color: var(--clr-cyan-veryDrak);
+}
+/* btns */
+.btn-sedan {
+  color: var(--clr-orange-bright);
+}
+.btn-suv {
+  color: var(--clr-cyan-drak);
+}
+.btn-luxury {
+  color: var(--clr-cyan-veryDrak);
+}
+.logo {
+  padding-top: 2rem;
+}
+/* 
+=================
+attribution
+=================
+*/
+.attribution {
+  color: black;
+  position: relative;
+  bottom: 16px;
+  left: 1rem;
+  font-size: 00.625rem;
+}
